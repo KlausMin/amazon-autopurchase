@@ -1,10 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  actions : {
-    puchaseByAsin(){
-      www.href = 'www.amazon.com';
+  asinURL : "https://www.amazon.com/dp/",
+  actions: {
+    asinApply(){
+      this.asinURL += document.getElementById('test');
     }
   },
-  model(){}
+  model(){
+    console.log(this.asinURL);
+    return this.asinURL;
+  }
 });
