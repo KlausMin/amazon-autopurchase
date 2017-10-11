@@ -1,5 +1,6 @@
-<input type="text" id="test" value="value"><br>
-<button {{action "asinApply"}}>ASIN Apply</button>
-<form action={{model}}>
-  <button>go!</button>
+<h1> ASIN : {{model}}</h1>
+<form {{action 'asinApply' model on='submit'}}>
+  {{input type="text" value=model}}
+  <button> Go! </button>
 </form>
+{{outlet}}
