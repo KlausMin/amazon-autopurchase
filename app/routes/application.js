@@ -5,10 +5,8 @@ export default Ember.Route.extend({
   actions: {
     asinApply(model){
       console.log(model);
-      this.transitionTo(this.amazonURL);
+      let url = this.amazonURL + model;
+      location.replace(url);
     }
-  },
-  model(){
-
   }
 });
